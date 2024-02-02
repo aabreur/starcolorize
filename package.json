@@ -1,0 +1,17 @@
+{
+  "name": "starcolorize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cleanup": "rm -rf output/*",
+    "local": "NODE_ENV=test node index.js"
+  },
+  "author": "alexandre.abreu.uff@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.6",
+    "fs-extra": "^9.1.0"
+  }
+}

@@ -1,0 +1,130 @@
+[
+    {
+        "name": "neo",
+        "basePalettes": [
+            "base", 
+            "neoGray"
+        ], 
+        "paletteCrossing": [
+            [
+                ["intensegreen"], 
+                ["leafgreen"]
+            ],
+            [
+                ["olive", "boreal", "brownish", "moon", "darkpurple"], 
+                ["pinkpurple", "aqua", "firecontrast", "blood", "orangetopurple"]
+            ]
+        ],
+        "targets": [
+            {
+                "template": "item",
+                "paths": [
+                    "/items/armors/other/neo/neo.head",
+                    "/items/armors/other/neo/neo.chest",
+                    "/items/armors/other/neo/neo.legs",
+                    "/items/armors/other/neo/neo.back"
+                ]
+            },
+            {
+                "template": "npc",
+                "paths": [
+                    "/npcs/tenants/neon.npctype"
+                ],
+                "params": {
+                    "parts": ["head", "chest", "legs", "back"],
+                    "includeVanillaIndexes":  [4, 5, 6, 7, 8, 9],
+                    "raceKey": "override"
+                }
+            }
+        ]
+    },
+    {
+        "name": "frogg",
+        "basePalettes": [
+            "froggGreen1",
+            "froggGreen2",
+            "froggYellow"
+        ], 
+        "paletteCrossing": [
+            [
+                [ "sbBLUE", "sbPURPLE", "sbPINK", "sbRED", "sbYELLOW", "sbORANGE", "deepblue", "intensegreen"], 
+                [ "sbWHITE"],
+                [ "boreal", "firecontrast"]
+
+            ],
+            [
+                [ "leafgreen", "darkpurple", "concrete"], 
+                [ "orangetopurple", "banana"],
+                [ "aqua", "olive", "blood"]
+            ]
+        ],
+        "targets": [
+            {
+                "template": "item",
+                "paths": [
+                    "/items/armors/biome/swamp/froggsuit/frogg.head",
+                    "/items/armors/biome/swamp/froggsuit/frogg.chest",
+                    "/items/armors/biome/swamp/froggsuit/frogg.legs"
+                ]
+            },
+            {
+                "template": "npc",
+                "paths": [
+                    "/npcs/biome/frogvillager.npctype"
+                ],
+                "params": {
+                    "parts": ["head", "chest", "legs"],
+                    "includeVanillaIndexes": [0],
+                    "raceKey": "hylotl",
+                    "matchColorIndices": true
+                }
+            }
+        ]
+    },
+    {
+        "name": "froggMerchant",
+        "basePalettes": [
+            "froggGreen1",
+            "froggGreen2",
+            "froggYellow",
+            "froggMerchRed"
+        ], 
+        "paletteCrossing": [
+            [
+                [ "sbBLUE", "sbPURPLE", "deepblue"], 
+                [ "sbWHITE"],
+                [ "boreal", "firecontrast"],
+                [ "sbGREEN", "sbGREY"]
+
+            ],
+            [
+                [ "leafgreen", "moon", "concrete"], 
+                [ "orangetopurple", "banana"],
+                [ "aqua", "olive", "blood"],
+                [ "sbYELLOW", "sbPINK"]
+            ]
+        ],
+        "targets": [
+            {
+                "template": "item",
+                "paths": [
+                    "/items/armors/biome/swamp/froggmerchant/froggmerchant.head",
+                    "/items/armors/biome/swamp/froggmerchant/froggmerchant.chest",
+                    "/items/armors/biome/swamp/froggmerchant/froggmerchant.legs"
+                ]
+            },
+            {
+                "template": "npc",
+                "paths": [
+                    "/npcs/biome/frogmerchant.npctype"
+                ],
+                "params": {
+                    "parts": ["head", "chest", "legs"],
+                    "includeVanillaIndexes": [0],
+                    "raceKey": "hylotl",
+                    "matchColorIndices": true
+                }
+            }
+        ]
+    }
+]
