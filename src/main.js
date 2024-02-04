@@ -1,6 +1,6 @@
 // src/main.js
 const { readFileAsync, writeFileAsync } = require('./utils/fileUtils');
-const { recurseCross } = require('./utils/paletteUtils');
+const { paletteCross } = require('./utils/paletteUtils');
 const { buildTemplate } = require('./templates');
 const config = require('./config');
 
@@ -10,11 +10,10 @@ const genPatches = async (inputPath = "input.json") => {
     for (let input of inputs) {
       console.log(`---- Starting working on ${input.name} -----`);
       const rc = input.paletteCrossing
-        .map(crossing => recurseCross(
+        .map(crossing => paletteCross(
           input.basePalettes,
           crossing,
-          config.getPalettes().ingame,
-          config.getPalettes().featured));
+          config.getPalettes()));
 
       const crossedPalettesList = [].concat(...rc);
 
