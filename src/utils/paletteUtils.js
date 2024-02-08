@@ -1,18 +1,19 @@
-const dictPalettes = (p1, p2) => ({
-    [p1[0]]: p2[0],
-    [p1[1]]: p2[1],
-    [p1[2]]: p2[2],
-    [p1[3]]: p2[3]
-});
+
+function mapPalettes(p1, p2) {
+    return p1.reduce((obj, key, index) => {
+        obj[key] = p2[index]; 
+        return obj;
+    }, {});
+}
   
-const paletteCross = (sourcePalettes, crossing, palettes, currentDepth = 0, memo = {}) => {
+function paletteCross(sourcePalettes, crossing, palettes, currentDepth = 0, memo = {}) {
     const memoKey = `${currentDepth}-${crossing[currentDepth].join('-')}`;
     if (memo[memoKey]) {
         return memo[memoKey];
     }
 
     let crossedPalettes = crossing[currentDepth].map(featuredPaletteName =>
-        dictPalettes(palettes[sourcePalettes[currentDepth]], palettes[featuredPaletteName]));
+        mapPalettes(palettes[sourcePalettes[currentDepth]], palettes[featuredPaletteName]));
 
     if (crossing[currentDepth + 1]) {
         let finalList = [];
@@ -29,6 +30,11 @@ const paletteCross = (sourcePalettes, crossing, palettes, currentDepth = 0, memo
         return crossedPalettes;
     }
 };
+
+async function fromHexFileToPalette(palette) {
+    const hexFile = await readFileAsync(`palettes/${palette}.hex`);
+    return hexFile.split('\n').map(line => line.split(' ').map(Number));
+}
 
 module.exports = {
     paletteCross

@@ -2,17 +2,17 @@
     {
         "name": "neo",
         "basePalettes": [
-            "base", 
-            "neoGray"
+            "source:base", 
+            "source:neoGray"
         ], 
         "paletteCrossing": [
             [
-                ["intensegreen"], 
-                ["leafgreen"]
+                ["extra:intensegreen"], 
+                ["extra:leafgreen"]
             ],
             [
-                ["olive", "boreal", "brownish", "moon", "darkpurple"], 
-                ["pinkpurple", "aqua", "firecontrast", "blood", "orangetopurple"]
+                ["extra:olive", "extra:boreal", "extra:brownish", "extra:moon", "extra:darkpurple"], 
+                ["extra:pinkpurple", "extra:aqua", "extra:firecontrast", "extra:blood", "extra:orangetopurple"]
             ]
         ],
         "targets": [
@@ -41,21 +41,24 @@
     {
         "name": "frogg",
         "basePalettes": [
-            "froggGreen1",
-            "froggGreen2",
-            "froggYellow"
+            "source:froggGreen1",
+            "source:froggGreen2",
+            "source:froggYellow",
+            "source:froggShirt"
         ], 
         "paletteCrossing": [
             [
-                [ "sbBLUE", "sbPURPLE", "sbPINK", "sbRED", "sbYELLOW", "sbORANGE", "deepblue", "intensegreen"], 
-                [ "sbWHITE"],
-                [ "boreal", "firecontrast"]
+                [ "starbound:blue", "starbound:purple", "starbound:pink", "starbound:red", "starbound:yellow", "starbound:orange", "extra:deepblue", "extra:intensegreen"], 
+                [ "starbound:white"],
+                [ "extra:boreal", "extra:firecontrast"],
+                [ "starbound:green", "starbound:grey"]
 
             ],
             [
-                [ "leafgreen", "darkpurple", "concrete"], 
-                [ "orangetopurple", "banana"],
-                [ "aqua", "olive", "blood"]
+                [ "extra:leafgreen", "extra:darkpurple", "extra:concrete"], 
+                [ "extra:orangetopurple", "extra:banana"],
+                [ "extra:aqua", "extra:olive", "extra:blood"],
+                [ "starbound:yellow", "starbound:pink"]
             ]
         ],
         "targets": [
@@ -84,24 +87,28 @@
     {
         "name": "froggMerchant",
         "basePalettes": [
-            "froggGreen1",
-            "froggGreen2",
-            "froggYellow",
-            "froggMerchRed"
+            "source:froggGreen1",
+            "source:froggGreen2",
+            "source:froggYellow",
+            "source:froggMerchRed",
+            "source:froggShirt"
         ], 
         "paletteCrossing": [
             [
-                [ "sbBLUE", "sbPURPLE", "deepblue"], 
-                [ "sbWHITE"],
-                [ "boreal", "firecontrast"],
-                [ "sbGREEN", "sbGREY"]
+                [ "starbound:pink", "starbound:red", "starbound:yellow", "starbound:orange"], 
+                [ "starbound:white"],
+                [ "extra:boreal", "extra:firecontrast"],
+                [ "starbound:blue", "starbound:purple", "starbound:green"],
+                [ "starbound:blue", "starbound:purple", "starbound:green"]
 
             ],
             [
-                [ "leafgreen", "moon", "concrete"], 
-                [ "orangetopurple", "banana"],
-                [ "aqua", "olive", "blood"],
-                [ "sbYELLOW", "sbPINK"]
+                [ "starbound:blue", "starbound:purple", "starbound:green"], 
+                [ "starbound:white"],
+                [ "extra:boreal", "extra:firecontrast"],
+                [ "starbound:pink", "starbound:red", "starbound:yellow", "starbound:orange"],
+                [ "starbound:pink", "starbound:red", "starbound:yellow", "starbound:orange"]
+
             ]
         ],
         "targets": [

@@ -1,0 +1,9 @@
+{
+    "base":           ["ffca8a", "e0975c", "a85636", "6f2919"],
+    "neoGray":        ["b1b1b1", "7c7a7a", "5a5859", "353535"],
+    "froggGreen1":    ["799c55", "487f39", "315d25", "18421b"],
+    "froggGreen2":    ["9cab5f", "86934e", "5f6c32", "3c431e"],
+    "froggYellow":    ["edeb5a", "edcc5a", "d4b54b", "ff0000"],
+    "froggMerchRed":  ["ff0000", "d93a3a", "932625", "601119"],
+    "froggShirt":     ["8e896a", "6f654d", "484332", "2f2b21"]
+}

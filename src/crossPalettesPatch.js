@@ -2,7 +2,7 @@
 const { readFileAsync, writeFileAsync } = require('./utils/fileUtils');
 const { paletteCross } = require('./utils/paletteUtils');
 const { buildTemplate } = require('./templates');
-const config = require('./config');
+const settings = require('./settings');
 
 const genPatches = async (inputPath = "input.json") => {
   try {
@@ -13,18 +13,18 @@ const genPatches = async (inputPath = "input.json") => {
         .map(crossing => paletteCross(
           input.basePalettes,
           crossing,
-          config.getPalettes()));
+          settings.palettes()));
 
       const crossedPalettesList = [].concat(...rc);
 
       for (let target of input.targets) {
         const docJson = JSON.stringify(buildTemplate(target.template, crossedPalettesList, {
           ...target.params,
-          starboundDefaultColorOptionsCount: config.getStarboundDefaultColorOptionsCount()
+          starboundDefaultColorOptionsCount: settings.STARBOUND_DEFAULT_COLOR_OPTIONS_COUNT
         }));
 
         for (let path of target.paths) {
-          const finalPath = config.getOutputBasePath() + path + '.patch';
+          const finalPath = settings.outputBasePath() + path + '.patch';
           console.log("Writing " + finalPath);
           await writeFileAsync(finalPath, docJson);
         }
